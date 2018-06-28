@@ -1,8 +1,9 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def WelcomePage(request):
-    return HttpResponse("Welcome to My program Hotels_Reservation")
+    return render(request, "welcome.html")
 
 
 

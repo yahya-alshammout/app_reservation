@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+
+{%block title%}
+    Customers
+{%endblock %}
+{%block content%}
+    <h2>This will list all customers</h2>
+    <ol>
+        <h4>Customers                   ---    mobile</h4>
+    {% for customer in customers %}
+        <li> {{ customer.customer_name }} ---  {{ customer.customer_phone }} </li>
+    {% endfor %}
+    </ol>
+{%endblock %}

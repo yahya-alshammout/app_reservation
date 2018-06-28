@@ -1,0 +1,18 @@
+{% extends "base.html"%}
+
+{%block title%}
+    Hotels
+{%endblock %}
+{%block content%}
+    <h2>This will list all hotels:</h2>
+    <ol>
+        <h4>Hotels                     ---    City</h4>
+    {% for hotel in hotels %}
+        <li>{{ hotel.hotel_name }}     ---   {{ hotel.hotel_city }} </li>
+    {% endfor %}
+     </ol>
+{% endblock %}
+
+
+
+
