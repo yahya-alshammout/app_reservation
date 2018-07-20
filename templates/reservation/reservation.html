@@ -4,6 +4,19 @@
     Reservations
 {%endblock %}
 {%block content%}
+    {% verbatim %}
+    <h1>Reservation by Angular</h1>
+    <div ng-controller="ReservationList">
+        <ul>
+            <div ng-repeat="reservation in reservations">
+                <li> {{ reservation.reservation_name }} </li>
+            </div>
+        </ul>
+        <input type="text" ng-model="new_reservation" />
+        <button ng-click="add_new_reservation(new_reservation, reservations)">Add</button>
+    </div>
+    {% endverbatim %}
+    <h1>Reservation by django</h1>
     <h2>This will list all reservations:</h2>
     <ol>
         <h4>Hotels                     ---    Customers      ---    enter_hotel   ---     exit_hotel</h4>

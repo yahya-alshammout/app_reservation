@@ -4,13 +4,26 @@
     Hotels
 {%endblock %}
 {%block content%}
-    <h2>This will list all hotels:</h2>
-    <ol>
-        <h4>Hotels                     ---    City</h4>
+    {% verbatim %}
+    <h1>Hotels by Angular</h1>
+    <div ng-controller="HotelReservation">
+        <ul>
+            <div ng-repeat="hotel in hotels">
+                <li> {{ hotel.hotel_name }} </li>
+            </div>
+        </ul>
+        <input type="text" ng-model="new_hotel" />
+        <button ng-click="add_new_hotel(new_hotel, hotels)">Add</button>
+    </div>
+    {% endverbatim %}
+<h1>Hotels by django</h1>
+<h2>This will list all hotels:</h2>
+<ol>
+    <h4>Hotels                     ---    City</h4>
     {% for hotel in hotels %}
         <li>{{ hotel.hotel_name }}     ---   {{ hotel.hotel_city }} </li>
     {% endfor %}
-     </ol>
+</ol>
 {% endblock %}
 
 
